@@ -4,7 +4,7 @@ module JoinProject
       def self.included(base)
         base.send(:include, InstanceMethods)
       end
-        
+
       module InstanceMethods
         def block_join_project_requests
           self[:block_join_project_requests]

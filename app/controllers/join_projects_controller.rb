@@ -3,7 +3,7 @@ class JoinProjectsController < ApplicationController
   before_filter :require_login
   before_filter :find_project
   before_filter :authorize
-  
+
   def create
     @member = @project.members.build
     @member.user = User.current
@@ -20,7 +20,7 @@ class JoinProjectsController < ApplicationController
   end
 
   private
-  
+
   def find_project
     @project = Project.find(params[:project_id])
     unless @project.self_subscribe_allowed?
