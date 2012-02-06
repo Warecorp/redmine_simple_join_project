@@ -1,4 +1,6 @@
-Thanks go to the following people for patches and contributions:
+This project is based on the work of Eric Davis http://github.com/edavis10/redmine_join_project
+
+Also thanks to the following people for patches and contributions:
 
 * Eric Davis of Little Stream Software - Project Maintainer
 * Joseph Potvin of Treasury Board Secretariat, Government of Canada - Project requirements & initial funding

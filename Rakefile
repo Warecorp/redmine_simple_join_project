@@ -4,7 +4,7 @@ require 'redmine_plugin_support'
 Dir[File.expand_path(File.dirname(__FILE__)) + "/lib/tasks/**/*.rake"].sort.each { |ext| load ext }
 
 RedminePluginSupport::Base.setup do |plugin|
-  plugin.project_name = 'redmine_join_project'
+  plugin.project_name = 'redmine_simple_join_project'
   plugin.default_task = [:test]
   plugin.tasks = [:doc, :release, :clean, :test]
   # TODO: gem not getting this automaticly
@@ -16,11 +16,10 @@ begin
   Jeweler::Tasks.new do |s|
     s.name = "redmine_event_notification_override"
     s.summary = "A Redmine plugin to allow non-members to join a project in Redmine"
-    s.email = "edavis@littlestreamsoftware.com"
-    s.homepage = "https://projects.littlestreamsoftware.com/projects/redmine-join"
+    s.email = "support@splendeo.es"
+    s.homepage = "http://github.com/splendeo/redmine_simple_join_project"
     s.description = "A Redmine plugin to allow non-members to join a project in Redmine"
-    s.authors = ["Eric Davis"]
-    s.rubyforge_project = "littlestream"
+    s.authors = ["Splendeo Innovación"]
     s.files =  FileList[
                         "[A-Z]*",
                         "init.rb",

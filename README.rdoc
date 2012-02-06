@@ -1,4 +1,4 @@
-= Redmine Join Project
+= Redmine Simple Join Project
 
 A Redmine plugin to allow non-members to join a project in Redmine
 
