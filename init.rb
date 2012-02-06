@@ -1,24 +1,24 @@
 require 'redmine'
 
-require 'join_project/hooks/layout_hooks'
-require 'join_project/hooks/my_hooks'
+require 'simple_join_project/hooks/layout_hooks'
+require 'simple_join_project/hooks/my_hooks'
 
 require 'dispatcher'
-Dispatcher.to_prepare :redmine_join_project do
+Dispatcher.to_prepare :redmine_simple_join_project do
   require_dependency 'project'
   require_dependency 'user_preference'
 
-  UserPreference.send(:include, JoinProject::Patches::UserPreferencePatch)
+  UserPreference.send(:include, SimpleJoinProject::Patches::UserPreferencePatch)
 
   # Remove the load the observer so it's registered for each request.
   ActiveRecord::Base.observers.delete(:project_join_request_observer)
   ActiveRecord::Base.observers << :project_join_request_observer
 end
 
-Redmine::Plugin.register :redmine_join_project do
+Redmine::Plugin.register :redmine_simple_join_project do
   name 'Simplified Join Project'
   author 'Eric Davis & Splendeo Innovación'
-  url 'https://githb.com/splendeo/redmine_join_project'
+  url 'https://github.com/splendeo/redmine_join_project'
   author_url 'http://www.littlestreamsoftware.com'
   description 'A Redmine plugin to allow non-members to join a project in Redmine'
   version '0.2.0'
@@ -34,7 +34,7 @@ Redmine::Plugin.register :redmine_join_project do
              }, :public => true)
 
   settings({
-             :partial => 'settings/redmine_join_project',
+             :partial => 'settings/redmine_simple_join_project',
              :default => {
                'roles' => [],
                'email_content' => 'A user would like to join your project. To approve or deny the request, use the link below:'

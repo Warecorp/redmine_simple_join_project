@@ -1,4 +1,4 @@
-module JoinProject
+module SimpleJoinProject
   module Patches
     module UserPreferencePatch
       def self.included(base)

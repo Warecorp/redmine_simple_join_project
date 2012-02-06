@@ -1,4 +1,4 @@
-module JoinProject
+module SimpleJoinProject
   module Hooks
     class LayoutHooks < Redmine::Hook::ViewListener
       def view_layouts_base_sidebar(context={})

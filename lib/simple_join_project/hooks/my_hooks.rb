@@ -1,4 +1,4 @@
-module JoinProject
+module SimpleJoinProject
   module Hooks
     class MyHooks < Redmine::Hook::ViewListener
       # :user
