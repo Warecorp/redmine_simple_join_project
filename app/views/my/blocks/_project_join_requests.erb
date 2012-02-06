@@ -1,0 +1,3 @@
+<% pending_requests = ProjectJoinRequest.pending_requests_to_manage %>
+
+<%= render :partial => 'join_project_requests/join_requests', :object => pending_requests %>
