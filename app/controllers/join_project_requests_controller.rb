@@ -54,9 +54,6 @@ class JoinProjectRequestsController < ApplicationController
 
   def find_project
     @project = Project.find(params[:project_id])
-    unless @project.request_to_join?
-      render_404
-    end
   rescue ActiveRecord::RecordNotFound
     render_404
   end
