@@ -7,7 +7,7 @@ class JoinProjectsController < ApplicationController
   def create
     @member = @project.members.build
     @member.user = User.current
-    @member.roles = Role.find(Setting.plugin_redmine_join_project['roles'])
+    @member.roles = Role.find(Setting.plugin_redmine_simple_join_project['roles'])
     respond_to do |format|
       if @member.save
         flash[:notice] = l(:notice_successful_create)
