@@ -1,14 +1,10 @@
 require 'redmine'
 
 require 'simple_join_project/hooks/layout_hooks'
-require 'simple_join_project/hooks/my_hooks'
 
 require 'dispatcher'
 Dispatcher.to_prepare :redmine_simple_join_project do
   require_dependency 'project'
-  require_dependency 'user_preference'
-
-  UserPreference.send(:include, SimpleJoinProject::Patches::UserPreferencePatch)
 
   # Remove the load the observer so it's registered for each request.
   ActiveRecord::Base.observers.delete(:project_join_request_observer)

@@ -20,5 +20,4 @@ en:
   join_project_text_unlogged: |
     You must be logged in order to join this project. Please {{log_in}}.
   join_project_text_log_in: log in
-  field_block_join_project_requests: "Block join project email requests"
 

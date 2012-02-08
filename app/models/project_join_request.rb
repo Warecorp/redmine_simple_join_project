@@ -31,7 +31,13 @@ class ProjectJoinRequest < ActiveRecord::Base
     ProjectJoinRequestMailer.deliver_declined_request(self)
     self
   end
-  
+
+  def approvers
+    project.users.select do |user|
+      user.allowed_to?(:approve_project_join_requests, project)
+    end
+  end
+
   def self.pending_requests_to_manage(user=User.current)
     status_of('new').visible_to(user)
   end
@@ -43,4 +49,5 @@ class ProjectJoinRequest < ActiveRecord::Base
   def self.pending_request_for?(user, project)
     ProjectJoinRequest.find_by_user_id_and_project_id(user.id, project.id)
   end
+
 end
