@@ -16,4 +16,12 @@ class ProjectJoinRequestMailer < Mailer
     body({:project_join_request => project_join_request})
     render_multipart('declined_request', body)
   end
+
+  def accepted_request(project_join_request)
+    recipients project_join_request.user.mail
+    subject "[#{project_join_request.project.name}] #{l(:join_project_text_accepted_request_to_join_this_project)}"
+
+    body({:project_join_request => project_join_request})
+    render_multipart('accepted_request', body)
+  end
 end

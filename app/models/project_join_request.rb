@@ -24,6 +24,7 @@ class ProjectJoinRequest < ActiveRecord::Base
     membership.user = user
     membership.roles = Role.find(Setting.plugin_redmine_simple_join_project['roles'])
     membership.save && self.update_attribute(:status, 'accepted')
+    ProjectJoinRequestMailer.deliver_accepted_request(self)
   end
 
   def decline!
