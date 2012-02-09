@@ -2,9 +2,11 @@
   <h3><%= l(:join_project_text_join_project) %></h3>
 
   <% if User.current.logged? %>
-    <p class="icon icon-add"><%= link_to(l(:join_project_text_request_to_join_this_project), join_project_requests_path(:project_id => project, :back_url => url_for(params)), :method => :post) %></p>
+    <p><%= l(:join_project_request_to_join_this_project_info) %></p>
+    <p class="icon icon-add"><%= link_to(l(:join_project_request_to_join_this_project_link), join_project_requests_path(:project_id => project, :back_url => url_for(params)), :method => :post) %></p>
   <% else %>
-    <p class="icon icon-projects"><%= l(:join_project_text_unlogged, :log_in => link_to( l(:join_project_text_log_in), signin_path) ) %></p>
+    <p><%= l(:join_project_unlogged_info) %></p>
+    <p class="icon icon-projects"><%= link_to( l(:join_project_log_in_link), signin_path) %></p>
   <% end %>
 </div>
 
