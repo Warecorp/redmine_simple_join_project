@@ -15,8 +15,8 @@ en:
   join_project_text_request_to_join_subject: Request to Join
   join_project_text_declined_request_to_join_this_project_subject: Declined request to join to this project
   join_project_text_accepted_request_to_join_this_project_subject: Accepted request to join to this project
-  join_project_text_your_request_to_join_was_declined: "Your request to join {{project}} was declined."
-  join_project_text_your_request_to_join_was_accepted: "Your request to join {{project}} was accepted."
+  join_project_text_your_request_to_join_was_declined: "Your request to join %{project} was declined."
+  join_project_text_your_request_to_join_was_accepted: "Your request to join %{project} was accepted."
   join_project_unlogged_info: |
     If you are interested in contributing to this project, you may request to join it. In order to do that, you must sign in first.
   join_project_log_in_link: Sign in
