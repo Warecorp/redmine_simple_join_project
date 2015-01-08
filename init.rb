@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'redmine'
 
 require 'simple_join_project/hooks/layout_hooks'
