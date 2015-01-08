@@ -1,3 +1,4 @@
+#encoding: utf-8
 #!/usr/bin/env ruby
 require 'redmine_plugin_support'
 
