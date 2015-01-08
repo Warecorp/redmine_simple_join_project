@@ -1,0 +1,26 @@
+# Spanish strings go here for Rails i18n
+es:
+  join_project_text_join_project: "Colaborar con este proyecto"
+  join_project_text_join_this_project: "Colaborar con este proyecto"
+  join_project_text_settings_configuration: "Configuración"
+  join_project_settings_help: "Elige que roles debe recibir un nuevo miembro del proyecto por defecto"
+  join_project_missing_roles: "No hay roles. Debe crear al menos un rol"
+  join_project_error_cant_join: "No se puede sumar al proyecto."
+  join_project_successful_request: "Tu solicitud para sumarte a este prouecto fue enviada. El/los administradores del mismo serán notificados."
+  join_project_successful_decline: "Solicitud rechazada"
+  join_project_setting_email_content: "Cuerpo del mensaje"
+  join_project_text_accept_request: "Aceptar solicitud"
+  join_project_text_decline_request: "Rechazar solicitud"
+  join_project_text_project_join_requests: "Solicitudes pendientes"
+  join_project_text_request_to_join_subject: "Request to Join"
+  join_project_text_declined_request_to_join_this_project_subject: "Solicitud para sumarse a proyecto fue rechazada"
+  join_project_text_accepted_request_to_join_this_project_subject: "Accepted request to join to this project"
+  join_project_text_your_request_to_join_was_declined: "Tu solicitud para sumarte al proyecto %{project} fue rechazada."
+  join_project_text_your_request_to_join_was_accepted: "Tu solicitud para sumarte al proyecto %{project} fue aceptada."
+  join_project_unlogged_info: "|
+    Si estar interesado en contribuir con este proyecto, puedes solicitar ser incorporado al mismo. Para hacerlo, primero debes ingresar con tu usuario."
+  join_project_log_in_link: "Ingresar ahora"
+  join_project_request_to_join_this_project_info: "|
+    Si estar interesado en contribuir con este proyecto, puedes solicitar ser incorporado al mismo usando el siguiente enlace. Tu solicitud será evaluada por el administrador del proyecto."
+  join_project_request_to_join_this_project_link: "Quiero sumarme a este proyecto"
+

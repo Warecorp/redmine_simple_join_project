@@ -1,26 +1,27 @@
-# Spanish strings go here for Rails i18n
-es:
-  join_project_text_join_project: "Colaborar con este proyecto"
-  join_project_text_join_this_project: "Colaborar con este proyecto"
-  join_project_text_settings_configuration: "Configuración"
-  join_project_settings_help: "Elige que roles debe recibir un nuevo miembro del proyecto por defecto"
-  join_project_missing_roles: "No hay roles. Debe crear al menos un rol"
-  join_project_error_cant_join: "No se puede sumar al proyecto."
-  join_project_successful_request: "Tu solicitud para sumarte a este prouecto fue enviada. El/los administradores del mismo serán notificados."
-  join_project_successful_decline: "Solicitud rechazada"
-  join_project_setting_email_content: "Cuerpo del mensaje"
-  join_project_text_accept_request: "Aceptar solicitud"
-  join_project_text_decline_request: "Rechazar solicitud"
-  join_project_text_project_join_requests: "Solicitudes pendientes"
+# English strings go here for Rails i18n
+en:
+  join_project_text_join_project: "Contributing to this Project"
+  join_project_text_join_this_project: "Contribute to this project"
+  join_project_text_settings_configuration: "Configuration"
+  join_project_settings_help: "Select which roles each new project member should receive by default"
+  join_project_missing_roles: "Missing Role.  Please create at least one first."
+  join_project_error_cant_join: "Unable to join the project."
+  join_project_successful_request: "Your request to join was added successfully. The project manager(s) have been notified."
+  join_project_successful_decline: "Declined join request"
+  join_project_setting_email_content: "Email body text"
+  join_project_text_accept_request: "Accept request"
+  join_project_text_decline_request: "Decline request"
+  join_project_text_project_join_requests: "Project Join Requests"
   join_project_text_request_to_join_subject: "Request to Join"
-  join_project_text_declined_request_to_join_this_project_subject: "Solicitud para sumarse a proyecto fue rechazada"
+  join_project_text_declined_request_to_join_this_project_subject: "Declined request to join to this project"
   join_project_text_accepted_request_to_join_this_project_subject: "Accepted request to join to this project"
-  join_project_text_your_request_to_join_was_declined: "Tu solicitud para sumarte al proyecto %{project} fue rechazada."
-  join_project_text_your_request_to_join_was_accepted: "Tu solicitud para sumarte al proyecto %{project} fue aceptada."
+  join_project_text_your_request_to_join_was_declined: "Your request to join %{project} was declined."
+  join_project_text_your_request_to_join_was_accepted: "Your request to join %{project} was accepted."
   join_project_unlogged_info: "|
-    Si estar interesado en contribuir con este proyecto, puedes solicitar ser incorporado al mismo. Para hacerlo, primero debes ingresar con tu usuario."
-  join_project_log_in_link: "Ingresar ahora"
+    If you are interested in contributing to this project, you may request to join it. In order to do that, you must sign in first."
+  join_project_log_in_link: "Sign in"
   join_project_request_to_join_this_project_info: "|
-    Si estar interesado en contribuir con este proyecto, puedes solicitar ser incorporado al mismo usando el siguiente enlace. Tu solicitud será evaluada por el administrador del proyecto."
-  join_project_request_to_join_this_project_link: "Quiero sumarme a este proyecto"
+    If you want to contribute to this project, use the link below to request to join. Your request will
+    be sent to the project manager for approval."
+  join_project_request_to_join_this_project_link: "Request to join this project"
 
