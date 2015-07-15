@@ -4,7 +4,7 @@ RedmineApp::Application.routes.draw do
   	member do
   	  match :accept, via: [:get, :put]
   	  match :decline, via: [:get, :put]
-  	end 
+  	end
   end
 
   resources :join_project_requests, :only => [:index]
