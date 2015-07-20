@@ -1,7 +1,7 @@
 # English strings go here for Rails i18n
 en:
-  join_project_text_join_project: Contributing to this Project
-  join_project_text_join_this_project: Contribute to this project
+  join_project_text_join_project: "Contributing to this Project"
+  join_project_text_join_this_project: "Contribute to this project"
   join_project_text_settings_configuration: "Configuration"
   join_project_settings_help: "Select which roles each new project member should receive by default"
   join_project_missing_roles: "Missing Role.  Please create at least one first."
@@ -12,16 +12,16 @@ en:
   join_project_text_accept_request: "Accept request"
   join_project_text_decline_request: "Decline request"
   join_project_text_project_join_requests: "Project Join Requests"
-  join_project_text_request_to_join_subject: Request to Join
-  join_project_text_declined_request_to_join_this_project_subject: Declined request to join to this project
-  join_project_text_accepted_request_to_join_this_project_subject: Accepted request to join to this project
+  join_project_text_request_to_join_subject: "Request to Join"
+  join_project_text_declined_request_to_join_this_project_subject: "Declined request to join to this project"
+  join_project_text_accepted_request_to_join_this_project_subject: "Accepted request to join to this project"
   join_project_text_your_request_to_join_was_declined: "Your request to join %{project} was declined."
   join_project_text_your_request_to_join_was_accepted: "Your request to join %{project} was accepted."
-  join_project_unlogged_info: |
-    If you are interested in contributing to this project, you may request to join it. In order to do that, you must sign in first.
-  join_project_log_in_link: Sign in
-  join_project_request_to_join_this_project_info: |
+  join_project_unlogged_info: "|
+    If you are interested in contributing to this project, you may request to join it. In order to do that, you must sign in first."
+  join_project_log_in_link: "Sign in"
+  join_project_request_to_join_this_project_info: "|
     If you want to contribute to this project, use the link below to request to join. Your request will
-    be sent to the project manager for approval.
-  join_project_request_to_join_this_project_link: Request to join this project
+    be sent to the project manager for approval."
+  join_project_request_to_join_this_project_link: "Request to join this project"
 
