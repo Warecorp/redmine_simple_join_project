@@ -6,24 +6,18 @@ class ProjectJoinRequest < ActiveRecord::Base
   validates_inclusion_of :status, :in => ['new', 'accepted', 'declined'], :allow_blank => 'true'
   validates_uniqueness_of :user_id, :scope => :project_id
 
-  scope :status_of, lambda { |status|
-    {
-      :conditions => {:status => status}
-    }
-  }
+  scope :status_of, ->(status) { where(status: status) }
 
-  scope :visible_to, lambda {|user|
-    {
-      :include => :project,
-      :conditions => Project.allowed_to_condition(user, :approve_project_join_requests)
-    }
+  scope :visible_to, ->(user) {
+    joins(:project).where(
+      Project.allowed_to_condition(user, :approve_project_join_requests))
   }
 
   def accept!
     membership = project.members.build
     membership.user = user
     membership.roles = Role.find(Setting.plugin_redmine_simple_join_project['roles'])
-    membership.save 
+    membership.save
     self.update_attribute(:status, 'accepted')
     ProjectJoinRequestMailer.deliver_accepted_request(self)
   end
@@ -43,7 +37,7 @@ class ProjectJoinRequest < ActiveRecord::Base
   def self.pending_requests_to_manage(user=User.current)
     status_of('new').visible_to(user)
   end
-  
+
   def self.create_request(user, project)
     ProjectJoinRequest.create(:user => user, :project => project, :status => 'new')
   end
