@@ -6,7 +6,7 @@
     <%= content_tag(:label, l(:label_role_plural)) %>
 
     <%-
-      roles = Role.all(:order => "position ASC")
+      roles = Role.all().order("position ASC")
       selected = @settings['roles'].collect(&:to_i) unless @settings['roles'].blank?
       selected ||= []
     -%>
