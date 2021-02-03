@@ -3,7 +3,7 @@ require 'redmine'
 require 'simple_join_project/hooks/layout_hooks'
 
 require 'dispatcher'
-ActionDispatch::Callbacks.to_prepare do
+ActionDispatch::Callbacks.to_param do
   require_dependency 'project'
 
   # Remove the load the observer so it's registered for each request.

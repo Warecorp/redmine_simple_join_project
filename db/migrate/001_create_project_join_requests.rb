@@ -1,4 +1,4 @@
-class CreateProjectJoinRequests < ActiveRecord::Migration
+class CreateProjectJoinRequests < ActiveRecord::Migration[5.2]
   def self.up
     create_table :project_join_requests do |t|
       t.integer :user_id

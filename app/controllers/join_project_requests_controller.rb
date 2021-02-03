@@ -1,9 +1,9 @@
 class JoinProjectRequestsController < ApplicationController
   unloadable
-  before_filter :require_login
-  before_filter :find_project, :except => [:index]
-  before_filter :authorize, :except => [:index]
-  before_filter :authorize_global, :only => [:index]
+  before_action :require_login
+  before_action :find_project, :except => [:index]
+  before_action :authorize, :except => [:index]
+  before_action :authorize_global, :only => [:index]
 
   def index
     @join_requests = ProjectJoinRequest.pending_requests_to_manage
