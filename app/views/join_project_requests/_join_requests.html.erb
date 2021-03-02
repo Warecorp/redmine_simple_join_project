@@ -15,10 +15,10 @@
       <%= content_tag(:td, link_to_user(project_join_request.user)) %>
       <%= content_tag(:td, link_to(h(project_join_request.project), :controller => 'projects', :action => 'show', :id => project_join_request.project)) %>
       <td>
-        <%= link_to(l(:join_project_text_accept_request), accept_join_project_request_path(:id => project_join_request, :project_id => project_join_request.project, :back_url => url_for(params.to_unsafe_h))) %> 
+        <%= link_to(l(:join_project_text_accept_request), accept_join_project_request_path(:id => project_join_request, :project_id => project_join_request.project, :back_url => url_for(params))) %> 
       </td>
       <td>
-        <%= link_to(l(:join_project_text_decline_request), decline_join_project_request_path(:id => project_join_request, :project_id => project_join_request.project, :back_url => url_for(params.to_unsafe_h))) %>
+        <%= link_to(l(:join_project_text_decline_request), decline_join_project_request_path(:id => project_join_request, :project_id => project_join_request.project, :back_url => url_for(params))) %>
       </td>
     </tr>
   <% end %>
