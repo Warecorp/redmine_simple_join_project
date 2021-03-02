@@ -23,7 +23,7 @@ class JoinProjectRequestsController < ApplicationController
   end
 
   def accept
-    @join_request = ProjectJoinRequest.find(params[:id])
+    @join_request = ProjectJoinRequest.find(params.to_unsafe_h[:id])
     
     respond_to do |format|
       if @join_request.accept!
@@ -37,7 +37,7 @@ class JoinProjectRequestsController < ApplicationController
   end
 
   def decline
-    @join_request = ProjectJoinRequest.find(params[:id])
+    @join_request = ProjectJoinRequest.find(params.to_unsafe_h[:id])
     
     respond_to do |format|
       if @join_request.decline!
@@ -53,7 +53,7 @@ class JoinProjectRequestsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find(params[:project_id])
+    @project = Project.find(params.to_unsafe_h[:project_id])
   rescue ActiveRecord::RecordNotFound
     render_404
   end

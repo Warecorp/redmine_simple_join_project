@@ -22,7 +22,7 @@ class JoinProjectsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find(params[:project_id])
+    @project = Project.find(params.to_unsafe_h[:project_id])
     unless @project.self_subscribe_allowed?
       render_404
     end
