@@ -3,7 +3,7 @@
 
   <% if User.current.logged? %>
     <p><%= l(:join_project_request_to_join_this_project_info) %></p>
-    <p class="icon icon-add"><%= link_to(l(:join_project_request_to_join_this_project_link), join_project_requests_path(:project_id => project, :back_url => url_for(params)), :method => :post) %></p>
+    <p class="icon icon-add"><%= link_to(l(:join_project_request_to_join_this_project_link), join_project_requests_path(:project_id => project, :back_url => url_for(params.to_unsafe_h)), :method => :post) %></p>
   <% else %>
     <p><%= l(:join_project_unlogged_info) %></p>
     <p class="icon icon-projects"><%= link_to( l(:join_project_log_in_link), signin_path) %></p>
