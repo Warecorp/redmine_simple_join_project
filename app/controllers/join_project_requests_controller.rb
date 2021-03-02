@@ -23,7 +23,7 @@ class JoinProjectRequestsController < ApplicationController
   end
 
   def accept
-    @join_request = ProjectJoinRequest.find(params.to_unsafe_h[:id])
+    @join_request = ProjectJoinRequest.find(params[:id])
     
     respond_to do |format|
       if @join_request.accept!
